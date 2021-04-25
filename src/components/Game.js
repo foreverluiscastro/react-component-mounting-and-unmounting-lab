@@ -39,6 +39,10 @@ class Game extends React.Component {
     });
   }
 
+  componentDidMount() {
+    return this.setCurrentTime()
+  }
+
   render() {
     const { pancakes, burnt, cooked, raw, time } = this.state;
     const pans = pancakes.map((pancake, index) => <Pancake key={index} id={pancake} takeItOff={this.takeItOff} />);
